@@ -9,9 +9,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  column-count: 4 250px;
+  display: inline-block;
+    /* column-gap: 20px;
+  column-rule: 1px solid #ccc; */
 }
 
-.galeria {
+/* .galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -26,7 +30,7 @@ body {
   border-radius: 1em;
 
    align-items: flex-start; 
-}
+} */
 
 .galeria h1 {
   width: 100%;
@@ -37,6 +41,7 @@ body {
 }
 
 .card {
+  display:inline-block;
   width: 250px;
   padding: 1em;
   border-radius: 1em;
@@ -47,7 +52,7 @@ body {
   margin: 1em;
   padding: 1.2em;
 
-  flex: 0 0 auto; 
+  /* flex: 0 0 auto;  */
 
 }
 
@@ -88,3 +93,5 @@ body {
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px #000;
 }
+
+
