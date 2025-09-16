@@ -1,0 +1,90 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: 
+    linear-gradient(135deg, rgba(15, 32, 39, 0.7), rgba(32, 58, 67, 0.7), rgba(44, 83, 100, 0.7)),
+    url("https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GR19V7816-backdrop_wide");
+  background-position: center top; 
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  gap: 1.5em;
+
+  background-attachment: fixed;
+
+  width: 90vw;
+  min-height: 80vh;
+
+  border-radius: 1em;
+
+   align-items: flex-start; 
+}
+
+.galeria h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 250px;
+  padding: 1em;
+  border-radius: 1em;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+
+  margin: 1em;
+  padding: 1.2em;
+
+  flex: 0 0 auto; 
+
+}
+
+.card img {
+  width: 100%;
+  max-width: 220px;
+  height: 300px; 
+  border-radius: 0.5em;
+  object-fit: contain; 
+  padding: 0.5em;
+}
+
+.card1 {
+  background-color: #1e90ff; 
+}
+
+.card2 {
+  background-color: rgb(255, 99, 71); 
+}
+
+.card3 {
+  background: rgb(60, 179, 113);
+}
+
+.card4 {
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+}
+
+.card5 {
+  background: radial-gradient(circle, #ff69b4, #8a2be2);
+}
+
+.card p {
+  font-size: 1rem;   
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #000;
+}
