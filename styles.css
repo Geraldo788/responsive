@@ -9,89 +9,110 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  column-count: 4 250px;
-  display: inline-block;
-    /* column-gap: 20px;
-  column-rule: 1px solid #ccc; */
 }
 
-/* .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2em;
-  gap: 1.5em;
+/* ============================= */
+/* Menú adaptable */
+/* ============================= */
+.menu {
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  padding: 1em;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: yellow;
+}
 
-  background-attachment: fixed;
-
-  width: 90vw;
-  min-height: 80vh;
-
-  border-radius: 1em;
-
-   align-items: flex-start; 
-} */
+/* ============================= */
+/* Galería con columnas */
+/* ============================= */
+.galeria {
+  column-count: 4;
+  column-gap: 1em;
+  padding: 1em;
+}
 
 .galeria h1 {
-  width: 100%;
+  column-span: all;
   text-align: center;
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1rem;
 }
 
+/* ============================= */
+/* Cards con proporciones iguales */
+/* ============================= */
 .card {
-  display:inline-block;
-  width: 250px;
-  padding: 1em;
+  display: inline-block;
+  width: 220px;
+  height: 320px;
+  margin: 0 0 1em;
   border-radius: 1em;
   text-align: center;
   color: white;
+  vertical-align: top;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
-
-  margin: 1em;
-  padding: 1.2em;
-
-  /* flex: 0 0 auto;  */
-
+  overflow: hidden;
 }
 
 .card img {
   width: 100%;
-  max-width: 220px;
-  height: 300px; 
-  border-radius: 0.5em;
-  object-fit: contain; 
-  padding: 0.5em;
-}
-
-.card1 {
-  background-color: #1e90ff; 
-}
-
-.card2 {
-  background-color: rgb(255, 99, 71); 
-}
-
-.card3 {
-  background: rgb(60, 179, 113);
-}
-
-.card4 {
-  background: linear-gradient(45deg, #ffcc00, #ff6600);
-}
-
-.card5 {
-  background: radial-gradient(circle, #ff69b4, #8a2be2);
+  height: 80%;
+  object-fit: contain;   /* mantiene proporción completa */
+  display: block;
 }
 
 .card p {
-  font-size: 1rem;   
-  font-style: italic;
+  height: 20%;
+  margin: 0;
+  padding-top: 0.3em;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 1px 1px 2px #000;
 }
 
+/* Colores de las cards */
+.card1 { background: #1e90ff; }
+.card2 { background-color: rgb(255, 99, 71);}
+.card3 { background: rgb(60, 179, 113);}
+.card4 { background: linear-gradient(45deg, #ffcc00, #ff6600); }
+.card5 { background: radial-gradient(circle, #ff69b4, #8a2be2);}
 
+/* ============================= */
+/* Media Queries */
+/* ============================= */
+@media (max-width: 1200px) {
+  .galeria { column-count: 3; }
+  body { background-color: #004466; }
+}
+
+@media (max-width: 992px) {
+  .galeria { column-count: 2; }
+  .card { width: 200px; height: 280px; }
+  body { background-color: #006666; }
+}
+
+@media (max-width: 768px) {
+  .galeria { column-count: 1; }
+  .card { width: 90%; height: auto; }
+  .card img { height: auto; }
+  body { background-color: #008888; }
+}
+
+/* ============================= */
+/* Estilos de impresión */
+/* ============================= */
+@media print {
+  body { background: white; }
+  .menu { display: none; }
+  .card { box-shadow: none; color: black; }
+  .galeria h1 { color: black; }
+}
